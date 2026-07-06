@@ -1,0 +1,4 @@
+[2026-07-06 20:40] ships.json: FAILED - Failed to fetch from https://raw.githubusercontent.com/KC3Kai/KC3Kai/master/src/data/ship.json
+[2026-07-06 20:40] slotitem.json: FAILED - Failed to fetch from https://raw.githubusercontent.com/KC3Kai/KC3Kai/master/src/data/slotitem.json
+[2026-07-06 20:45] ships.json: NEW - First sync - 1272 items
+[2026-07-06 20:45] slotitem.json: NEW - First sync - 69 items
