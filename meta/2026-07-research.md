@@ -160,3 +160,178 @@ Dedicated strategy pages exist for:
 - **Moegirlpedia** main page returned 404 (page may have been moved or renamed)
 - **KC3Kai Wiki** had DNS resolution issues from this environment
 - **Reddit** blocked API access with 403
+
+---
+
+## 6. Updated Research - 2026-07-07 (Enriched from Wikipedia API)
+
+### Combat Mechanics Details
+
+#### Ship Attributes
+Ship effectiveness in combat depends on these attribute parameters:
+- **Hitpoints (HP)** - durability before sinking
+- **Armor** - damage reduction against gunfire
+- **Evasion** - chance to dodge incoming attacks
+- **Aircraft Capacity** - how many planes a carrier can hold
+- **Speed** - fleet speed class (Slow, Fast)
+- **Attack Range** - determines who fires first (Close < Mid < Long)
+- **Firepower** - gun damage output
+- **Torpedo** - torpedo damage output
+- **Anti-Air (AA)** - effectiveness against aircraft
+- **Anti-Submarine (ASW)** - effectiveness against submarines
+- **Line-of-Sight (LOS)** - detection range for night combat and air recon
+- **Luck** - affects hit rate, evasion, critical hits, and drop rates
+
+#### Combat Phases
+1. **Pre-Battle**: Fleet formation, equipment selection, morale check
+2. **Air Battle Phase**: Carrier aircraft engage enemy carriers/air groups
+3. **Torpedo Phase**: Submarines and ships with torpedoes fire (submarine first)
+4. **Gun Battle Phase**: Ships fire based on attack range ordering
+5. **Night Battle** (if applicable): Extended gun combat at close range
+6. **Post-Battle**: Rating system (A-E), experience distribution, drops
+
+#### Fleet Speed Classes
+- **Slow**: BB (battleships), CA (heavy cruisers) - speed 15-20
+- **Fast**: DD (destroyers), CL (light cruisers), CV (carriers) - speed 30+
+
+#### Attack Range System
+- **Close Range** (range 1): Torpedoes, some destroyers
+- **Mid Range** (range 2): Most cruisers, some battleships
+- **Long Range** (range 3): BBs with 46cm guns, some CA/CL
+
+#### Night Battle Mechanics
+- Triggered when fleet is at close range after gun battle
+- Additional torpedo and gunfire phase
+- DD/CL ships excel in night combat with special torpedoes
+- Special equipment: Searchlights, Torpedo Rockets, Kai-Ni upgrades
+
+### Ship Girl Classification by Hull Type
+
+| Hull Type | Abbreviation | Speed Class | Typical Role |
+|-----------|-------------|-------------|--------------|
+| Destroyer | DD | Fast | Torpedo attacks, screening, ASW |
+| Light Cruiser | CL | Fast | Screening, AA support, night raids |
+| Heavy Cruiser | CA | Slow | Gunfire support, flagship |
+| Battlecruiser | CB | Fast | Fast gunfire support |
+| Battleship | BB | Slow | Main firepower, flagship |
+| Aircraft Carrier | CV/CVL | Fast/Slow | Air superiority, bombardment |
+| Submarine | SS | Slow | Stealth torpedo attacks |
+| Transport | AR | Slow | Resource delivery, special ops |
+
+### Foreign Navy Ships (as of January 2026)
+
+Foreign navies represented in the game (in implementation order):
+1. **Soviet Navy** - Verniy (first foreign vessel, Sept 2013), Gangut, Petr Velikiy
+2. **Kriegsmarine (Germany)** - March 2014 update
+3. **Regia Marina (Italy)** - Spring 2015 event + August 2015
+4. **United States Navy** - Iowa (first Allied ship, Feb 2016 via Kai)
+5. **Royal Navy (UK)** - Various ships added post-2016
+6. **French Navy** - Added in later updates
+7. **Swedish Navy** - Later additions
+8. **Royal Netherlands Navy** - Later additions
+9. **Royal Australian Navy** - Later additions
+10. **Republic of China Navy** - Later additions
+11. **Argentine Navy** - Later additions
+12. **Royal Norwegian Navy** - Later additions
+13. **Royal Thai Navy** - Latest additions
+
+### Marriage System (Level Cap Break)
+
+- Purchase "marriage papers and ring" for 700 yen or via special quest
+- Allows ship to exceed Lv.99 cap → new maximum of **Lv.175**
+- Provides stat boosts and decreased operating costs
+- Can be repeated indefinitely, no limit on number of marriages
+- Ships can be married multiple times
+
+### Fatigue & Morale System
+
+- Ships accumulate fatigue after sorties (decreased attributes)
+- **Sparkled ships** (high morale): Increased attributes, better drop rates
+- **Fatigued ships**: Decreased stats across the board
+- Recovery methods: Rest period, Mamiya food supply ship, port repairs
+- Fleet-wide morale can be boosted with specific consumables
+
+### Resource System Details
+
+Four core resources that auto-regenerate over time:
+1. **Fuel** - Used for sorties and expeditions
+2. **Ammo** - Consumed during battles
+3. **Steel** - Required for construction and equipment
+4. **Bauxite** - Used for aircraft fuel, critical for carrier operations
+
+Additional consumables available via microtransactions or quest rewards:
+- Repair dock tokens (instant repair)
+- Development kits (equipment crafting)
+- Expansion materials (dock/supply yard upgrades)
+- Speed repairs (instant sortie recovery)
+
+### Server System
+
+- **20 servers** as of January 2016, each named after a WWII-era Japanese naval base:
+  - Sasebo, Kure, Maizuru, Yokosuka, Kiska, Okinawa, Truk, Rabaul, etc.
+- New player registrations were lottery-based from Aug 2013 due to server overload
+- After July 2015, new registrants could join Server 20 without lottery
+
+### Game Engine Transition
+
+**Flash Era (1st Sequence)**:
+- Original game on Adobe Flash engine
+- Discontinued August 15, 2018 with Flash EOL
+
+**HTML5 Port (2nd Sequence / KanColle Kai)**:
+- Full port to HTML5 engine with higher resolution and frame rate
+- Extended October 17, 2025 with further improvements
+- Maintains core gameplay while modernizing the technical foundation
+
+### Cultural Impact Data
+
+- **#艦これ** was the most used hashtag on Japanese Twitter in 2013
+- 8th most searched term on Google Japan in 2013
+- GameSpark named it "Online Game of the Year" 2013 (ahead of LoL, WoT, FFXIV)
+- 9 out of 151 Japanese game developers selected it as best game of 2013
+- Naoki Yoshida (FFXIV director): Called it "Japan's answer to World of Tanks"
+
+### JMSDF Collaboration
+
+- Japan Maritime Self-Defense Force official collaboration with the franchise
+- Ship girls used as mascorts for real ships bearing the same name
+- **Shigure** is the official mascot for Sasebo Naval District
+- JS Kaga (Izumo-class helicopter carrier) launched 2015, featured in ISEAD 2018 deployment
+
+### Related Media Franchise
+
+| Title | Type | Release Date | Notes |
+|-------|------|-------------|-------|
+| Kantai Collection (browser) | Web game | April 23, 2013 | Original Flash version |
+| Kantai Collection: Kagerou, Setting Sail! | Light novel | Nov 2013 | First LN, sold 16,624 copies week 1 |
+| Fubuki, Ganbarimasu! | Manga | Dec 2013 | Sold 28,324 copies week 1 |
+| Kantai Collection (TV anime) | Anime series | Jan-Mar 2015 | First season |
+| KanColle: The Movie | Animated film | Nov 2016 | Compilation film |
+| Kantai Collection Kai (PS Vita) | Turn-based strategy | Feb 18, 2016 | Famitsu score: 29/40 |
+| KanColle Arcade | Arcade game | April 26, 2016 | Sega AM2, 3D characters |
+| Kantai Collection (TV anime S2) | Anime series | Nov 2022 | Second season |
+
+### Notable Ship Girl Examples
+
+- **Kongō**: Adds English words/phrases referencing British origins (Kongo-class built in UK)
+- **Shimakaze**: Depicted as speedy girl, one of fastest destroyers of WWII
+- **Yamato**: Largest battleship ever built, depicted with commanding presence
+- **Akagi & Kaga**: Carrier sisters, share design motifs from their historical class
+
+### Related Games Using Similar Concepts
+
+- **Azur Lane** - Shoot 'em up with moe anthropomorphized warships (WWII US/UK/Japan/Germany)
+- **Girls' Frontline** - Strategy RPG with firearms personified as girls
+- **Tōken Ranbu** - Clone of KanColle but with historical swords as young men
+
+### IP Infringement Case (2015)
+
+Beijing Longzhu Digital Technology purchased Chinese-language KanColle forums for ¥700,000 (~$112,800), including Baidu Tieba subforum. Led to:
+- Widespread unrest among Chinese players of original Japanese game
+- Large-scale DDoS attacks and SQL injection against bootleg server
+- Called "largest online mass boycott against IP infringement in China" by CCTV
+
+### Political Commentary
+
+- **Hankook Ilbo** (South Korea, Nov 2013): Accused game of glorifying Imperial Japanese Navy due to conservative political shift among young people
+- **Asahi Shimbun**: Suggested unforgiving mechanics (permanent ship loss) help players understand war's brutality and gain historical understanding

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>KanColle X Post Extractor</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a2e; color: #eee; }
+        .container { max-width: 800px; margin: 0 auto; }
+        iframe { width: 100%; height: 600px; border: none; display: none; }
+        #status { padding: 10px; background: #16213e; border-radius: 8px; margin-bottom: 20px; }
+        .tweet { background: #16213e; padding: 15px; border-radius: 8px; margin-bottom: 10px; }
+        .tweet-text { color: #fff; line-height: 1.5; }
+        .tweet-meta { color: #888; font-size: 12px; margin-top: 5px; }
+        button { padding: 10px 20px; background: #e94560; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #c73650; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>KanColle X Post Extractor</h2>
+        <div id="status">Loading...</div>
+        <button onclick="extractTweets()">Extract Tweets</button>
+        <div id="results" style="margin-top: 20px;"></div>
+    </div>
+
+    <iframe id="xframe" src="https://x.com/KanColle_STAFF"></iframe>
+
+    <script>
+        // Wait for iframe to load, then extract tweets
+        const iframe = document.getElementById('xframe');
+        
+        function waitForIframeLoad() {
+            let attempts = 0;
+            const maxAttempts = 30; // 30 seconds max
+            
+            const interval = setInterval(() => {
+                attempts++;
+                document.getElementById('status').textContent = `Loading... (attempt ${attempts}/${maxAttempts})`;
+                
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    
+                    if (iframeDoc && iframeDoc.body) {
+                        // Check if we can access the DOM
+                        const articles = iframeDoc.querySelectorAll('article');
+                        
+                        if (articles.length > 0) {
+                            clearInterval(interval);
+                            document.getElementById('status').textContent = `Loaded! Found ${articles.length} articles. Extracting...`;
+                            
+                            // Try to extract tweet text
+                            let tweets = [];
+                            articles.forEach(function(article, index) {
+                                if (index < 10) { // Limit to first 10
+                                    const textEl = article.querySelector('[data-testid="tweetText"]');
+                                    const timeEl = article.querySelector('time');
+                                    
+                                    if (textEl && textEl.textContent.trim().length > 20) {
+                                        tweets.push({
+                                            text: textEl.textContent.trim(),
+                                            date: timeEl ? timeEl.getAttribute('datetime') || timeEl.textContent : 'Unknown'
+                                        });
+                                    }
+                                }
+                            });
+                            
+                            if (tweets.length === 0) {
+                                // Try alternative selectors
+                                articles.forEach(function(article, index) {
+                                    if (index < 10 && tweets.length < 5) {
+                                        const p = article.querySelector('p');
+                                        if (p && p.textContent.trim().length > 20) {
+                                            const timeEl = article.querySelector('time');
+                                            tweets.push({
+                                                text: p.textContent.trim(),
+                                                date: timeEl ? timeEl.getAttribute('datetime') || timeEl.textContent : 'Unknown'
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+                            
+                            displayResults(tweets);
+                        } else if (attempts >= maxAttempts) {
+                            clearInterval(interval);
+                            document.getElementById('status').textContent = `Timeout! No content found. Try clicking "Extract Tweets" button.`;
+                        }
+                    }
+                } catch(e) {
+                    // Cross-origin restriction - can't access iframe DOM directly
+                    if (attempts >= maxAttempts) {
+                        clearInterval(interval);
+                        document.getElementById('status').textContent = `Cross-origin restriction detected. Try using the "Extract Tweets" button.`;
+                    }
+                }
+            }, 1000);
+        }
+        
+        function extractTweets() {
+            // Force extraction attempt
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                if (iframeDoc && iframeDoc.body) {
+                    let tweets = [];
+                    const articles = iframeDoc.querySelectorAll('article');
+                    
+                    articles.forEach(function(article, index) {
+                        if (index < 10) {
+                            const textEl = article.querySelector('[data-testid="tweetText"]');
+                            const timeEl = article.querySelector('time');
+                            
+                            if (textEl && textEl.textContent.trim().length > 20) {
+                                tweets.push({
+                                    text: textEl.textContent.trim(),
+                                    date: timeEl ? timeEl.getAttribute('datetime') || timeEl.textContent : 'Unknown'
+                                });
+                            }
+                        }
+                    });
+                    
+                    if (tweets.length === 0) {
+                        articles.forEach(function(article, index) {
+                            if (index < 10 && tweets.length < 5) {
+                                const p = article.querySelector('p');
+                                if (p && p.textContent.trim().length > 20) {
+                                    const timeEl = article.querySelector('time');
+                                    tweets.push({
+                                        text: p.textContent.trim(),
+                                        date: timeEl ? timeEl.getAttribute('datetime') || timeEl.textContent : 'Unknown'
+                                    });
+                                }
+                            }
+                        });
+                    }
+                    
+                    displayResults(tweets);
+                } else {
+                    document.getElementById('status').textContent = `Iframe not loaded yet. Wait a few seconds and try again.`;
+                }
+            } catch(e) {
+                document.getElementById('status').textContent = `Error: ${e.message}`;
+            }
+        }
+        
+        function displayResults(tweets) {
+            const resultsDiv = document.getElementById('results');
+            
+            if (tweets.length === 0) {
+                resultsDiv.innerHTML = '<p>No tweets found. X.com may require login to show tweet content.</p>';
+                return;
+            }
+            
+            let html = `<h3>Found ${tweets.length} tweets:</h3>`;
+            tweets.forEach(function(tweet, index) {
+                html += `
+                    <div class="tweet">
+                        <div class="tweet-text">${index + 1}. ${tweet.text}</div>
+                        <div class="tweet-meta">Date: ${tweet.date}</div>
+                    </div>
+                `;
+            });
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        // Start loading iframe on page load
+        window.addEventListener('load', waitForIframeLoad);
+    </script>
+</body>
+</html>
