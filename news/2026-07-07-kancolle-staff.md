@@ -151,10 +151,16 @@
   - Link: https://x.com/KanColle_STAFF/status/2065447411284369698
 
 ## Notes:
-- Feed source: Fxtwitter RSS (https://fxtwitter.com/KanColle_STAFF/feed.xml) — last updated 2026-07-03
-- Total tweets in feed: 90, all new (none previously processed)
-- Most significant recent event: Summer event maintenance rescheduled from 7/4 to 7/8 due to extended preparation time
+- Feed source: Fxtwitter RSS (https://fxtwitter.com/KanColle_STAFF/feed.xml) — last updated 2026-07-07
+- Total tweets in feed: ~91, incremental check performed
+- Most significant recent event: Summer event maintenance confirmed for 7/8 (16:00–22:00), final announcement posted today
 - Summer event will feature 5 operational areas (3 Pacific + 2 European), lasting ~1.5 months
 - New item "格納庫増設" (Hangar Expansion) early implementation announced for June 26 maintenance
 - May operation rewards distributed; cheater bans completed
 - 13th anniversary Famitsu special feature published
+
+### 2026-07-07 — Summer Event Maintenance Final Confirmation (New)
+
+- [2026-07-07 18:34] 提督の皆さん、お疲れさまです！「艦これ」稼働全20サーバ群は、初夏のメンテナンス＆アップデートを【7/8(水) 16:00～22:00】に実施します。同メンテ完了を以て、2026年夏イベ：期間限定海域【前段作戦】を実施予定です！#艦これ #メンテナンス 同メンテを以て、「艦これ」も完全に梅雨明け、今季「てるてる坊主お役御免パネル2026」及び【てるてる坊主】は消滅します。まだ【てるてる坊主】を残している提督方は、どうぞお忘れなく！
+  - Link: https://x.com/KanColle_STAFF/status/2074426939297980807
+
