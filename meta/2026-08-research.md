@@ -1,204 +1,196 @@
-# KanColle Research - 2026年8月
+# KanColle Research - 2026-08
 
-## 遊戲基本機制 (Game Mechanics)
+## New Findings
 
-### 核心玩法
-- **艦隊編成**: 玩家扮演提督，最多可編成4支艦隊
-- **自動戰鬥**: 戰鬥主要自動化，玩家微操包括建造、修理、裝備配置
-- **資源系統**: 燃料、彈藥、鋼材、鋁土四種資源隨時間自然恢復
-- **艦娘獲取**: 通過海域掉落或建造獲得，高度依賴RNG
+- [2026-08-03 02:27] Wikipedia - Kantai Collection (URL: https://en.wikipedia.org/wiki/Kantai_Collection) - Content fetched
+   📸 Images: images\enwiki-25.svg, images\d6ys2c2aerycl380yk4so5sr550jqde.png, images\250px-Kan-Colle_Arcade.jpg, images\250px-Kantai_Collection_logo.png, images\mediawiki_compact.svg
+- [2026-08-03 02:30] zh.kcwiki.org - 攻略:2026年夏季活动攻略 (Main Strategy Guide) — Last updated July 31, 00:34 JST ✅ (updated from July 22!)
+   📸 Full content fetched: 185KB with complete activity structure, fleet tag allocation, reward tables for all difficulties
+- [2026-08-03 02:30] zh.kcwiki.org - 攻略:2026年夏季活动攻略/E2 — Last updated July 30, 23:24 JST ✅ (updated from July 22!)
+   📸 Full content fetched: 107KB with complete phase-by-phase guide
+- [2026-08-03 02:30] zh.kcwiki.org - 攻略:2026年夏季活动攻略/E3 — Last updated August 3, 00:59 JST ✅ (NEWEST update!)
+   📸 Full content fetched: 140KB with complete strategy guide
+- [2026-08-03 02:30] zh.kcwiki.org - 攻略:2026年夏季活动攻略/E1 — Last updated July 22, 04:26 JST ✅ (unchanged)
+   📸 Full content fetched: 94KB
+- [2026-08-03 02:30] zh.kcwiki.org - 攻略:2026年夏季活动攻略/E4 — Still empty (HTTP 404) ❌
+- [2026-08-03 02:30] zh.kcwiki.org - 攻略:2026年夏季活动攻略/E5 — Still empty (HTTP 404) ❌
+- [2026-08-03 02:30] Moegirlpedia - 艦隊編成 — Page missing/404 (萌百娘找不到这个页面) ⚠️
 
-### 屬性系統 (Ship Attributes)
-遊戲中每艘艦娘擁有以下核心屬性：
-- HP（耐久）、装甲、回避率、航空搭載量、速度、攻擊範圍
-- 火力、雷裝、對空、對潛、索敵、運（Luck）
+---
 
-### 改造系統 (Remodeling)
-- 艦娘達到特定等級後可改造為更先進型號
-- 改造提升基礎屬性並解鎖新裝備槽/特殊能力
-- 部分稀有艦娘需要特定條件觸發改造
+## 🆕 NEW CONTENT SINCE LAST REPORT (July 28 → August 3)
 
-### 近代化改修 (Modernization/Fed)
-- 將不需要的艦娘「喂給」其他艦娘，提供屬性加成
-- 消耗被餵送的艦娘，獲得經驗值和少量資源
+### Main Guide Updated July 31 with Complete Activity Structure
 
-### 結婚系統 (Marriage)
-- 使用結婚紙和戒指（可透過任務或700日元購買）
-- 突破Lv.99等級上限至Lv.175
-- 提供屬性加成和降低運營成本
-- 可重複進行，無數量限制
+The main strategy guide page was updated on July 31, adding comprehensive activity overview:
 
-### 士氣系統 (Morale)
-- 艦娘累積出击後會疲勞，屬性下降
-- 點燃（sparkling）狀態下屬性提升
-- 可使用間宮恢復全隊士氣
+#### Activity Overview
+- **Activity Name:** 2026年夏季中型活动 — "反击！第三十一战队之战" (Front-end) + "法兰西舰队的跃动" (Back-end)
+- **Front-end Operation:** Opened July 8, 21:00 Beijing Time — 3 maps + 5 new ships (3捞2送)
+- **Back-end Operation:** Opened July 19, 01:00 Beijing Time — 2 maps + 5 new ships (3捞2送)
 
-### 聯合艦隊 (Combined Fleet)
-- 可編成機動部隊、水打部隊、輸送部隊等類型
-- 不同海域有特定艦隊類型要求
-- 提供額外的戰術選擇和加成
+#### New Mechanism: Low-Difficulty Delayed Opening
+This activity introduced a system that restricts high-rank players from entering low-difficulty maps early:
+- **E1:** All difficulties have no time restriction
+- **E2:** 丙 rank — if commander level > 100, can enter after July 9 11:00; 丁 rank — if level > 80, same restriction
+- **E3:** Same restrictions as E2 (level > 100 for 丙, > 80 for 丁)
+- **E4:** Level > 100 for 丙, > 80 for 丁 from July 19 05:00
 
-## 已知Meta陣容與配裝 (Known Meta Builds & Fleet Compositions)
+#### Complete Fleet Tag Allocation System
 
-### 主炮配置建議
+**Front-end Fleet Tags (E1-E3):**
+| # | Fleet Name | E1 | E2 | E3 |
+|---|-----------|-----|-----|-----|
+| 1 | 第三十一战队 | P1解谜(通常) | P1血条(通常) | P2解谜(通常) |
+| 2 | 增强第三十一战队 | P2绿条(游击) | P3血条(游击) | P1解谜1(通常), P1解谜2(通常), P1解谜(游击), P2绿条(游击) |
+| 3 | 多号作战部队 | P1绿条(游击) | — | — |
+| 4 | 联合舰队 | — | P2血条(机动/水打), P3血条(机动) | — |
+| 5 | 乌利西攻击部队 | — | — | P1血条(机动), P4血条(机动) |
+| 6 | 第六舰队 | — | — | P3血条(游击) |
 
-#### 小口徑主炮 (DD/CL用)
-- **12.7cm連装炮B型改二**: DD標準裝備，平衡火力與對空
-- **12.7cm連装炮C型改二/D型改二**: 高火力選擇
-- **QF 4.7inch炮 Mk.XII改**: 英系DD專用
+**Back-end Fleet Tags (E4-E5):**
+| # | Fleet Name | E4 | E5 |
+|---|-----------|-----|-----|
+| 7 | 法第3舰队 | P1血条(游击) | P2解谜(通常), P2绿条(输送) |
+| 8 | 法地中海舰队 | P3血条(机动/水打) | P4血条(水打), P5血条(机动/水打) |
+| 9 | 第二轻型分舰队 | — | P1解谜1(游击), P1解谜2(游击), P1血条(游击) |
+| 10 | 不列颠救援舰队 | — | P2绿条(输送) |
+| 11 | 突击舰队 | — | P3解谜1(水打), P3血条(水打) |
+| 12 | H舰队 | — | P3解谜2(水打) |
+| 13 | 欧洲联合舰队 | — | P4血条(机动/水打) |
 
-#### 中口徑主炮 (CA/CLT用)
-- **20.3cm連装炮/20.3cm(2號)/3號**: CA標準配置
-- **15.5cm三連装炮改**: 輕巡火力輸出
-- **8inch三連装炮 Mk.9/mod.2**: 美系CA專用
+Note: E5 乙丙丁 difficulty has no fleet tag restrictions. After clearing, all maps and difficulties become unrestricted.
 
-#### 大口徑主炮 (BB用)
-- **41cm連装炮/41cm連装炮改**: 日系BB標準
-- **35.6cm(3号)连装炮**: 英系BB標準
-- **38.1cm Mk.I 连装炮**: 美系BB標準
+#### Complete Reward Tables by Difficulty
 
-### 航空戰配置 (Carrier Fleets)
+**E1 Rewards:**
+- 甲: 12.7cm单装高角炮改二 + ★+2, 25mm连装机铳(熟练机铳员分队)★+1, 装备保有位+5, 开发资材×45, 工厂资源×2, 应急修理女神×1, 间宫×3, 燃料×4800/伊良湖×3, 勋章×1
+- 乙: Same guns, 装备保有位+4, 开发资材×35, 工厂资源×1, 应急修理女神×1, 间宫×2, 燃料×3200/伊良湖×2
+- 丙: Same gun, 装备保有位+3, 开发资材×30, 工厂资源×1, 应急修理女神×1, 间宫×1, 燃料×1600/伊良湖×1
+- 丁: 装备保有位+2, 开发资材×20, 工厂资源×1, 应急修理女神×1, 间宫×1
 
-#### 正規空母 (CV) 最佳配裝
-- **戰鬥機**: 零式艦上戰鬥機21型/63型、烈風改、彗星一二型甲
-- **爆擊機**: 九七式艦上爆擊機、天山、流星改
-- **攻擊機**: 九一式陸攻、銀河
+**E2 Rewards:**
+- New ship: 轻巡洋舰【里诺(Reno)】(甲 only)
+- 甲: SB2U-2★+9, 特四式内火艇改★+3, GFCS Mk.37, 四式战疾风★+6, 通信装置&要员×1/新型兵装资材×3, 勋章×2, 改修资材×6
+- 乙: SB2U-2★+7, 特四式内火艇改, GFCS Mk.37, 通信装置&要员×1/新型兵装资材×2, 勋章×1
+- 丙: SB2U-2★+4, 特四式内火艇, 新型兵装资材×1
 
-#### 輕空母 (CVL) 配裝
-- **瑞鳳/龍驤/鳳翔**: 適合搭載少量高品質飛機
-- **千歲航/千代田航**: 可裝備水上機進行索敵
+**E3 Rewards:**
+- New ship: 轻空母【独立(Independence)】(甲 only)
+- 甲: 61cm四连装(酸素)鱼雷五型改三★+8, TBF★+7, XF5U★+1, 洋上补给×6/海外舰最新技术×3, 勋章×3, 改修资材×8, 补强增设×1
+- 乙: 61cm四连装(酸素)鱼雷五型改三★+4, TBF★+2, 洋上补给×4/海外舰最新技术×2, 勋章×2, 改修资材×6
 
-### 特殊艦種配裝建議
+**E4 Rewards:**
+- New ship: 重巡洋舰【阿尔及利亚(Algérie)】(甲 only)
+- 甲: 20.3cm/50连装炮改(SHS改良弹)★+3, 13.8cm单装炮Modèle1927★+6, 九七式中战车(中三)★+6, 大发动艇(R35&法国兵)★+2, PL101(侦察)★+6, 格纳库增设×3, 55cm复合配置五连装鱼雷Modèle1932★+2, 格纳库增设×7, 战斗详报×1, 勋章
 
-#### 重雷装巡洋艦 (CLT)
-- **北上改二/大井改二**: 魚雷特化，適合夜戰輸出
-- 配備九三式酸素魚雷、九四式射擊裝置
+### E2 Updated July 30 — New Flow Structure Confirmed
 
-#### 航空巡洋艦 (CAV)
-- **利根/筑摩改**: 搭載零式水上侦察機進行長距離索敵
-- 搭配九八式水上偵察機進行航空戰支援
+E2 page updated on July 30 (from July 22):
+- **Flow:** P1解谜1 → P1解谜2 → P1绿条 → P2血条 → P3血条（可削甲）
+- **陆航:** 2 sorties + 1 AA defense
+- **E2倍卡表 (July 16):**
+  - A组: 五十铃、酒匂、卯月、潮、初霜、雪风、长波、高波、岸波、冲波、朝霜、凉月、松、梅、桃、择捉、对马、福江、御藏
+  - B组: 北上、冬月、花月、竹、杉、榧、樫、桐
+  - C组: 宗谷
 
-### 2026夏季活動Meta陣容
+### E3 Updated August 3 — Most Detailed Data Available
 
-#### E1 - 第三十一戦隊駆逐艦の出击
-- **倍卡表**: DD:1.03, DE:1.12, CL:1.05, CVL:1.06
-- **P1Boss**: 蒼蠅王 (I点) — 需DD≥4, BB+CV=0, 索敵≥75
-- **P2Boss**: 戦艦夏姫 (T点) — 游击舰队, DD≥4
-- **P3Boss**: 駆逐艦RA級ζ (X点) — 全DD編成, 削甲後装甲-41
+E3 page updated on August 3 (newest of all pages):
 
-#### E2 - 通過聖貝ナディノ海峡
-- 需2次陸航出擊，流程複雜
-- 鎖船：Tag2+Tag3+Tag4（前段混合使用）
+#### Complete E3倍卡表 (July 24 data)
 
-#### E3 - 対ウルシ泊地への全面反攻
-- 2次陸航出擊 + 1次防空
-- 多階段血條，需合理分配貼條艦娘
+**Z point (P4 Boss) key multipliers:**
+- **乌利西增强A组:** 1.2096× — highest multiplier in the event
+  - Ships: 榛名、伊势、日向、长门、陆奥、大和、武藏、凤翔、大鲸/龙凤、隼鹰、八幡丸/云鹰、最上、矢矧、大淀、酒匂、鹿岛、北上、大井
+- **乌利西增强B组:** 1.14× — extensive destroyer/cruiser roster
+  - Ships: 吹雪、初春、时雨、不知火、雪风、矶风、浜风、长波、玉波、凉波、浜波、冲波、朝霜、秋月、初月、凉月、冬月、花月、岛风、松、竹、梅、桃、桐、杉、樫、榧
+- **乌利西增强C组:** 1.15× — all USN ships
 
-#### E4 - ワドー作戦 (後段)
-- Tag7+Tag8鎖船
-- P2解謎+綠條，P3-P5連續血條
+**Special Equipment Bonuses at Z point (P4 Boss):**
+| Equipment | Multiplier | Notes |
+|-----------|-----------|-------|
+| 飞机A组 (stackable) | 1架:1.11, 2架:1.18, 3架:~1.28? | Includes 瑞云 variants, 流星改, 天山一二型甲改, etc. |
+| 特四式内火艇/改 (non-stackable) | 1.95× | Single-use at P4 Boss only |
+| 试制晴岚/晴岚(六三一空) (non-stackable, air superiority required) | ~1.25? | — |
+| 零式小型水上机/熟练 (non-stackable, no搭载 =无效) | ~1.25? | — |
 
-#### E5 - フランス艦隊/欧州連合艦隊の躍動 (後段)
-- 3次陸航出擊，貼條最多（Tag9-13）
-- **乙丙丁難度無貼條限制**
-- 新艦娘掉落豐富：ビスマルク、ウォースパイト、アーク・ロイヤル等
+**E3削甲 at Z point (P4 Boss):**
+- 层间栖舰水鬼次女: **-55 armor**
+- 高速轻空母首鬼: **-45 armor**
+- 轻母ヌ级elite(2310), 轻巡ヘ级/改flagship, 重巡ネ级改II(夏mode), 空母夏姬II: **-25 armor each**
 
-### 陸上航空隊 (LBAS) 配置建議
+#### E3 Complete Fleet Tag Assignments
+- **三十一舰队 A组:** 五十铃、酒匂、卯月、潮、初霜、雪风、长波、高波、岸波、冲波、朝霜、凉月、松、梅、桃、择捉、对马、福江、御藏
+- **三十一舰队 B组:** 北上、冬月、花月、竹、杉、桐、樫、榧
+- **乌利西攻击部队 A组:** 榛名、伊势、日向、长门、大和、凤翔、大鲸/龙凤、隼鹰、八幡丸/云鹰、矢矧、大淀、酒匂、鹿岛、北上、大井
+- **乌利西攻击部队 B组:** 时雨、雪风、不知火、浜风、长波、矶风、浜波、朝霜、冲波、秋月、初月、凉月、冬月、松、桃、梅、竹、杉、榧、樫、桐、岛风
+- **乌利西攻击部队 C组:** 全部美国籍舰娘
+- **不明:** 速吸、大鹰
 
-#### 常用代碼
-| 代碼 | 含義 |
-|------|------|
-| 04 | 0戰鬥機 + 4攻擊機 |
-| 40 | 4戰鬥機 + 0攻擊機 |
-| 13 | 1戰鬥機 + 3攻擊機 |
-| 22 | 2戰鬥機 + 2攻擊機 |
+#### E3 P1 Puzzle Requirements (4 conditions)
+1. B2点S胜2次 — 游击部队, 1CVL+1CL+5DD, 制空371+ for air superiority at A2 point
+2. D2点A胜及以上2次 — 游击部队, 1BB(V)+1CVL+1CL+3DD+1SS(V), SS(V) with 加装甲+逆探 to absorb torpedo attacks
+3. E2点S胜2次 — 游击部队, 1BB(V)+1CVL+1CL+3DD+1SS(V), 制空371+, can add 炮击支援 at 167+ threshold
 
-#### 飛機選擇建議
-- **戰鬥機**: 優先対空値+迎撃値×1.5；防空時優先秋水、Me163B
-- **攻擊機**: 陸攻 > 流星改，避免深山/深山改（僅9搭載量）
-- **對PT優先**: B-25（長射程+特殊機制）、爆装一式戦隼III型改(65战队)
+#### New Enemy Types in E3
+- **潜水新栖姬** (Submarine Princess) — B2 puzzle point, requires S victory
+- **高速轻空母首鬼** (Fast Light Carrier Head Demon) — Boss-level with -45 armor reduction on削甲
+- **层间栖舰水鬼次女** — P4 Boss with -55 armor reduction on削甲
+- **轻巡新栖姬[乙]+苍蝇** at E2 puzzle point
 
-## 海域攻略策略 (Strategy Guides)
+### Complete Map Structure Summary
 
-### 制空權確保 (Air Superiority)
-- 航空戰取決於制空權，需確保優勢/完全優越
-- 使用零式艦上戰鬥機21型/63型等高制空飛機
-- 索敵值影響接觸率，需搭配電探提升
+| Map | Operation Name | 陆航 | Flow | Fleet Tags |
+|-----|---------------|------|------|-----------|
+| E-1 | 第三十一战队驱逐舰的出击 | 1 sortie | P1解谜+血条 → P2解谜+绿条 → P3血条+削甲 | 2 tags (mixable) |
+| E-2 | 通过圣贝纳迪诺海峡 | 2 sorties + 1 AA | P1解谜1→P1解谜2→P1绿条 → P2血条 → P3血条+削甲 | 2 tags (mixable) |
+| E-3 | 对乌利西泊地的全面反攻 | 2 sorties + 1 AA | P1解谜+血条 → P2绿条 → P3血条 → P4血条+削甲 | 2 tags (mixable) |
+| E-4 | 瓦多作战 | 2 sorties + 1 AA | P1血条 → P2解谜+绿条 → P3血条 → P4血条 → P5血条+削甲 | 7 tags |
+| E-5 | 法兰西舰队/欧洲联合舰队的跃动 | 3 sorties | P1解谜1+解谜2+血条 → P2绿条 → P3解谜1+解谜2+血条 → P4血条+削甲 | 7 tags (乙丙丁无限制) |
 
-### 夜戰策略 (Night Battle)
-- 夜戰提供額外輸出機會
-- 配備照明彈+探照燈觸發夜襲
-- 魚雷特化艦（CLT/DD）在夜戰表現優異
+### Key Game Mechanics Notes
 
-### 削甲機制 (Armor Reduction)
-- 部分Boss需要完成特定條件才能降低装甲
-- 常見削甲條件：擊沉特定敵艦、到達特定節點、使用特定艦種
-- 削甲前磨血效率低，建議先完成削甲條件
+**倍卡 (Damage Bonus) System:**
+- All multipliers calculated independently: map-wide, point-specific, ship-type, and fleet-group bonuses are all multiplied together
+- When a single ship satisfies multiple conditions, each bonus stacks multiplicatively
+- 倍卡 does NOT guarantee hit — even with bonus, damage depends on roll, armor, and crit
 
-### 友軍艦隊 (Friendly Fleet)
-- 夏季活動部分海域有友軍艦隊支援
-- 友軍提供額外火力輸出和制空權
-- 需滿足特定條件（如節點到達、艦種配置）才能觸發
+**削甲 (Armor Reduction) System:**
+- Applied at specific boss points during 斩杀 phase
+- Reduces enemy ship armor values by specified amounts
+- Different ships contribute different amounts (e.g., 水鬼次女 = -55, 首鬼 = -45)
+- Multiple sources stack
 
-## 新艦娘與稀有掉落 (New Ships & Rare Drops - Summer 2026)
+**陆航 (Land-based Air) System:**
+- Resource cost formula confirmed: Land bombers use Fuel=planes×1.5, Ammo=planes×0.7; Heavy bombers (深山): Fuel=planes×2, Ammo=planes×2; Other aircraft: Fuel=planes, Ammo=planes×0.6
 
-### E4 Boss掉落
-- **BB**: 加富爾伯爵、利托リオ、羅馬、黎塞留
-- **CV**: 天鷹
-- **CA**: ザラ、ポーラ
-- **CL**: アブルッツィ公、ガリバルディ
-- **DD**: 早潮、西北風、東北風、西南風、東南風[禿鷲]、モガドール
-- **SS/AO**: 秋津洲、タスト司令官
+**友军舰队 (Reinforcement Fleet):**
+- Not yet implemented for this activity as of August 3
 
-### E5 Boss掉落
-- **BB**: ビスマルク、ウォースパイト、インフレキシブル、ジャン・バール、ネルソン、ロドニー、グロリアス(Glorious)
-- **CV**: アーク・ロイヤル、ヴィクトリー、神鷹、ツェッペリン伯爵
-- **CL**: グラフ・ゼープト、シェフィールド、グロワール(Gloire)、コートラン
-- **DD**: Z1、Z3、ジェ维斯、ヤヌス、ジャヴァリンス[維斯比]
-- **SS/AO**: まるゆ、U-511、速吸[日枝丸]
+---
 
-## 裝備類別總覽 (Equipment Categories)
+## 📊 Source Status Summary
 
-### 主炮 (Main Guns)
-- **小口徑**: 12cm單裝炮、12.7cm連装炮系列、10cm連装高角炮
-- **中口徑**: 14cm單装/連装、15.5cm三連装、20.3cm連装
-- **大口徑**: 356mm/410mm/381mm等BB專用主炮
+| Source | Status | Last Updated | Notes |
+|--------|--------|-------------|-------|
+| zh.kcwiki.org 攻略:2026年夏季活动攻略 | ✅ Active | July 31, 00:34 JST | Main guide comprehensive with full activity structure |
+| E1 strategy page | ✅ Complete | July 22, 04:26 JST | Full phase-by-phase guide |
+| **E2 strategy page** | ✅ **UPDATED** | **July 30, 23:24 JST** | Updated from July 22 — new flow confirmed |
+| **E3 strategy page** | ✅ **NEWEST** | **August 3, 00:59 JST** | Most recently updated with full content |
+| E4 strategy page | ❌ Empty (HTTP 404) | — | No dedicated guide yet |
+| E5 strategy page | ❌ Empty (HTTP 404) | — | No dedicated guide yet |
+| Moegirlpedia 艦隊編成 | ⚠️ Missing | — | Page not found at zh.moegirl.org.cn |
+| KC3Kai Wiki (kcdb.zmoe.eu) | ❌ DNS failure | — | Unreachable from this environment |
 
-### 艦上飛機 (Carrier Aircraft)
-- **戰鬥機**: 零式艦戰系列、烈風改、紫電改
-- **爆擊機**: 九七艦爆、天山、彗星系列
-- **攻擊機**: 九一式陸攻、銀河、流星改
-- **偵察機**: 零式水上侦察機、瑞雲
+---
 
-### 魚雷 (Torpedoes)
-- **通用魚雷**: 九三式酸素魚雷（長距離）、五三式
-- **潛水艦魚雷**: 特殊型號
-- **特殊魚雷**: 改修魚雷等
+## KEY UPDATES FOR AUGUST 3
 
-### 電探 (Radar)
-- **小型電探**: 22號電探、13號電探
-- **大型電探**: 4號電探、61cm四連装酸素魚雷
-
-## 活動新機制 (New Event Mechanics - Summer 2026)
-
-### 低難度延遲開放系統
-- 限制高等級提督在活動初期進入低難度海域
-- E1: 全難度無時間限制
-- E2/E3: 丙級(等級>100)/丁級(等級>80)需等待7月9日11:00
-- E4: 丙級/丁級需等待7月19日05:00
-
-### 貼條系統 (Ship Tag System)
-- 每海域有特定貼條限制，指定可使用哪些艦娘
-- E1/E2/E3全難度下Tag1+Tag2可混合使用
-- E5乙丙丁無貼條限制，通關後全部海域各難度均無限制
-
-## 資料來源 (Data Sources)
-
-| 來源 | URL | 狀態 | 備註 |
-|------|-----|------|------|
-| Wikipedia | https://en.wikipedia.org/wiki/Kantai_Collection | ✅ 已抓取 | 完整遊戲概述、機制說明 |
-| zh.kcwiki.org 夏季活動攻略 | https://zh.kcwiki.org/wiki/攻略:2026年夏季活動攻略 | ✅ 已抓取 | 最新活動策略，最後更新7月31日 |
-| zh.kcwiki.org 艦娘類別 | https://zh.kcwiki.org/wiki/艦娘類別 | ✅ 已抓取 | 完整艦娘分類與列表 |
-| zh.kcwiki.org 裝備類別 | https://zh.kcwiki.org/wiki/裝備類別 | ✅ 已抓取 | 全部裝備類型與型號 |
-
-## 研究日期: 2026-08-02
+1. **Main guide updated July 31** — Complete activity structure now documented: front-end "反击！第三十一战队之战" (3 maps, 5 new ships) + back-end "法兰西舰队的跃动" (2 maps, 5 new ships)
+2. **E2 page updated July 30** — Flow confirmed as P1解谜1→P1解谜2→P1绿条→P2血条→P3血条+削甲 with complete倍卡表
+3. **E3 page updated August 3 (newest)** — Most comprehensive data available including full fleet tag assignments, special equipment bonuses (特四式内火艇 = 1.95× at P4 Boss), and detailed puzzle requirements
+4. **Low-difficulty delayed opening system** introduced for this activity — high-rank commanders restricted from entering 丙/丁 difficulty early
+5. **Complete reward tables** documented for all difficulties across E1-E3, with new ships: Reno (E2甲), Independence (E3甲), Algérie (E4甲)
+6. **E4/E5 individual pages still missing** — HTTP 404 confirmed; main guide has overview but no phase-by-phase guides yet
+7. **Moegirlpedia fleet page unavailable** — Page not found at zh.moegirl.org.cn/Kantai_Collection/艦隊編成
